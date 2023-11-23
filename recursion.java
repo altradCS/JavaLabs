@@ -1,15 +1,17 @@
 public class recursion {
+
   public static void main(String[] args) {
+    String str = "racecar";
+    System.out.println(isPalindrome(str));
+  }
 
-    //call your recursion fuction
-    //print result
+  public static boolean isPalindrome(String str) {
+    if (str == null || str.length() <= 1)
+      return true;
 
-   }
-    
-    public double.... recursionFunction {
-      //implement your case algorithm
-      return....
-    }
-  
+    if (str.charAt(0) != str.charAt(str.length() - 1))
+      return false;
+
+    return isPalindrome(str.substring(1, str.length() - 1));
+  }
 }
-    
